@@ -30,5 +30,13 @@ export class Category {
   static create(props: CategoryCreateCommand): Category {
     return new Category(props);
   }
+
+  changeName(name: string): void {
+    this.name = name;
+  }
+
+  changeDescription(description: string): void {
+    this.description = description;
+  }
 }
 

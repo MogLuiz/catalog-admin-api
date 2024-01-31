@@ -35,4 +35,12 @@ describe('Category Unit Tests', () => {
 
     expect(category.name).toEqual('Games');
   })
+
+  it('Should change category description', () => {
+    const category = Category.create({ name: 'Movie' });
+
+    category.changeDescription('Games category');
+
+    expect(category.description).toEqual('Games category');
+  })
 })

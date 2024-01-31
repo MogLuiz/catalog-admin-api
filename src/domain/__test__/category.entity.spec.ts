@@ -60,4 +60,23 @@ describe('Category Unit Tests', () => {
 
     expect(category.is_active).toBeFalsy();
   })
+
+  it('Should return a JSON object with category data', () => {
+    const date = new Date();
+
+    const category = new Category({
+      name: 'Movie',
+      description: 'Movies category',
+      is_active: false,
+      created_at: date
+    });
+
+    const categoryJSON = category.toJSON();
+
+    expect(categoryJSON.name).toEqual('Movie');
+    expect(categoryJSON.description).toEqual('Movies category');
+    expect(categoryJSON.category_id).toBeUndefined();
+    expect(categoryJSON.is_active).toBeFalsy();
+    expect(categoryJSON.created_at).toEqual(date);
+  })
 })

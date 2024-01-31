@@ -43,4 +43,13 @@ describe('Category Unit Tests', () => {
 
     expect(category.description).toEqual('Games category');
   })
+
+  it('Should activate category', () => {
+    const category = Category.create({ name: 'Movie' });
+
+    category.deactivate();
+    category.activate();
+
+    expect(category.is_active).toBeTruthy();
+  })
 })

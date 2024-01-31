@@ -27,4 +27,12 @@ describe('Category Unit Tests', () => {
     expect(category.is_active).toBeFalsy();
     expect(category.created_at).toEqual(date);
   })
+
+  it('Should change category name', () => {
+    const category = Category.create({ name: 'Movie' });
+
+    category.changeName('Games');
+
+    expect(category.name).toEqual('Games');
+  })
 })

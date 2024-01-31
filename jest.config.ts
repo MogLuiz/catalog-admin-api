@@ -13,7 +13,7 @@ const config: Config = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/zz/4ss5r2cs2lq2dnd4jxf54dkr0000gp/T/jest_dy",
+  // cacheDirectory: "/tmp/jest_rs",
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
@@ -123,7 +123,7 @@ const config: Config = {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-  rootDir: 'src',
+  rootDir: './src',
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
@@ -176,7 +176,7 @@ const config: Config = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(t|j)s$': '@swc/jest',
+    '^.+\\.(t|j)sx?$': '@swc/jest',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

@@ -52,4 +52,12 @@ describe('Category Unit Tests', () => {
 
     expect(category.is_active).toBeTruthy();
   })
+
+  it('Should deactivate category', () => {
+    const category = Category.create({ name: 'Movie' });
+
+    category.deactivate();
+
+    expect(category.is_active).toBeFalsy();
+  })
 })
